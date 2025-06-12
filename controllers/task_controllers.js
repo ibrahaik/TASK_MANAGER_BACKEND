@@ -1,6 +1,5 @@
 const Task = require('../models/Task');
 
-// Obtener todas las tareas
 const getTasks = async (req, res) => {
   try {
     const tasks = await Task.find();
@@ -10,7 +9,6 @@ const getTasks = async (req, res) => {
   }
 };
 
-// Crear tarea
 const createTask = async (req, res) => {
   try {
     const { nombre, descripcion, fecha, estado } = req.body;
@@ -22,7 +20,6 @@ const createTask = async (req, res) => {
   }
 };
 
-// Actualizar tarea completa (PUT)
 const updateTask = async (req, res) => {
   try {
     const { id } = req.params;
@@ -34,7 +31,6 @@ const updateTask = async (req, res) => {
   }
 };
 
-// Actualizar parcialmente (PATCH)
 const patchTask = async (req, res) => {
   try {
     const { id } = req.params;
@@ -46,7 +42,6 @@ const patchTask = async (req, res) => {
   }
 };
 
-// Borrar tarea
 const deleteTask = async (req, res) => {
   try {
     const { id } = req.params;
