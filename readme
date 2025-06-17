@@ -1,0 +1,94 @@
+📋 Task Manager Backend
+Task Manager Backend es una API RESTful construida con Node.js, Express y MongoDB. Proporciona endpoints para gestionar tareas, permitiendo operaciones CRUD completas con una base de datos MongoDB. Es el componente backend que alimenta aplicaciones de gestión de tareas como Spark Note.
+
+🚀 Características principales
+✅ Crear, leer, actualizar y eliminar tareas (CRUD completo)
+
+🔄 Soporte para operaciones PUT y PATCH para actualizaciones
+
+📅 Campos de tarea: nombre, descripción, fecha y estado
+
+🛡️ Validación de datos con Mongoose Schema
+
+🌐 Configuración CORS para conexión con frontend
+
+⚡ Conexión eficiente a MongoDB con Mongoose
+
+🧑‍💻 Manejo robusto de errores y respuestas JSON estandarizadas
+
+🧰 Tecnologías utilizadas
+🟢 Node.js + Express
+
+🍃 MongoDB + Mongoose ODM
+
+🔄 CORS para políticas de seguridad
+
+🔌 Nodemon para desarrollo con recarga automática
+
+📦 Gestión de dependencias con npm
+
+📁 Estructura del proyecto
+text
+ibrahaik-task_manager_backend/
+├── db.js
+├── package.json
+├── server.js
+├── controllers/
+│   └── task_controllers.js
+├── models/
+│   └── Task.js
+└── routes/
+    └── task_routes.js
+🔧 Instalación y uso
+Clonar el repositorio:
+
+bash
+git clone https://github.com/ibrahaik/ibrahaik-task_manager_backend.git
+cd ibrahaik-task_manager_backend
+Instalar dependencias:
+
+bash
+npm install
+Configurar MongoDB:
+
+Asegúrate de tener MongoDB instalado y corriendo localmente
+
+La aplicación se conecta por defecto a mongodb://localhost:27017/taskdb
+
+Iniciar el servidor:
+
+bash
+npm start  # Para producción
+# o
+npm run dev  # Para desarrollo (con Nodemon)
+El servidor estará disponible en http://localhost:5000
+
+🌐 Endpoints de la API
+GET / → Obtener todas las tareas
+
+POST / → Crear nueva tarea
+
+Body requerido: { nombre: string }
+
+Body opcional: { descripcion: string, fecha: Date, estado: "pendiente"|"completada" }
+
+PUT /:id → Actualizar completamente una tarea
+
+PATCH /:id → Actualizar parcialmente una tarea
+
+DELETE /:id → Eliminar una tarea
+
+Ejemplo de tarea:
+
+json
+{
+  "nombre": "Comprar leche",
+  "descripcion": "Leche desnatada",
+  "fecha": "2023-10-15T00:00:00.000Z",
+  "estado": "pendiente"
+}
+✨ Integración con Frontend
+Este backend está diseñado para funcionar perfectamente con aplicaciones frontend como Spark Note - Gestor de Tareas. Simplemente configura la URL del backend en tu aplicación frontend y disfruta de una API completa para gestionar tareas.
+
+Ibrahim Haik
+🔗 LinkedIn / GitHub
